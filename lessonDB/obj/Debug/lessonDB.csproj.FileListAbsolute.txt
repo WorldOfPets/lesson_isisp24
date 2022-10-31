@@ -37,3 +37,9 @@ C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\MaterialDesignTh
 C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\obj\Debug\App.baml
+C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Polivanov.E.D\source\repos\lessonDB\lessonDB\bin\Debug\Newtonsoft.Json.Bson.xml

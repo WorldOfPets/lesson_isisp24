@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,6 +27,7 @@ namespace lessonDB
         {
             InitializeComponent();
 
+            get_json();
             Helper.entities = new lesson_dbEntities();
 
             dataGrid.ItemsSource = Helper.entities.User.ToList();
@@ -81,5 +84,20 @@ namespace lessonDB
 
             refresh_grid();
         }
+
+        private async void get_json() 
+        {
+            string url = "https://jsonplaceholder.typicode.com/comments";
+            HttpClient http = new HttpClient();
+
+            var responce = await http.GetAsync(url);
+            var responcecontent = await responce.Content.ReadAsStringAsync();
+
+            if (responce.StatusCode == System.Net.HttpStatusCode.OK) { 
+                List<CommentsModel> commentsModels = JsonConvert.DeserializeObject<List<CommentsModel>>(responcecontent);
+                apiDataGrid.ItemsSource = commentsModels;
+            }
+        }
+
     }
 }

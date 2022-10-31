@@ -36,6 +36,27 @@
             </DataGrid.Columns>
         </DataGrid>
 
+        <DataGrid
+            Grid.Row="1"
+            Grid.Column="1"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            Name="apiDataGrid">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding color}"/>
+                    <EventSetter Event="Selected" Handler="DataGridRow_Selected"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding id}" Width="60"/>
+                <DataGridTextColumn Header="post id" Binding="{Binding postId}" Width="80"/>
+                <DataGridTextColumn Header="name" Binding="{Binding name}" Width="1*"/>
+                <DataGridTextColumn Header="email" Binding="{Binding email}" Width="1*"/>
+                <DataGridTextColumn Header="body" Binding="{Binding body}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
         <StackPanel
             Grid.Row="1"
             Margin="5"
