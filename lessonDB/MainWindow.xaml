@@ -33,6 +33,13 @@
                 <DataGridTextColumn Header="password" Binding="{Binding pass}" Width="1*"/>
                 <DataGridTextColumn Header="age" Binding="{Binding Age}" Width="60"/>
                 <DataGridTextColumn Header="role" Binding="{Binding Role.name}" Width="1*"/>
+                <DataGridTemplateColumn Header="Image">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding img}" Width="100"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
@@ -58,6 +65,7 @@
         </DataGrid>
 
         <StackPanel
+            Name="myPanel"
             Grid.Row="1"
             Margin="5"
             Grid.Column="0">
@@ -100,6 +108,10 @@
             <Button
                 Click="Button_Click_1"
                 Content="Delete"
+                Margin="5"/>
+            <Button
+                Click="Button_Click_3"
+                Content="Upload photo"
                 Margin="5"/>
         </StackPanel>
 

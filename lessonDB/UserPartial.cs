@@ -48,5 +48,16 @@ namespace lessonDB
                 return first_char + "*******" + last_char;
             }
         }
+
+        public string img {
+            get {
+                if (image != null)
+                {
+                    string fullpath = System.IO.Path.GetFullPath(image);
+                    return fullpath;
+                }
+                return "Картинки нет";
+            }
+        }
     }
 }

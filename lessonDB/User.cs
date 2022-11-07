@@ -20,7 +20,7 @@ namespace lessonDB
         public Nullable<System.DateTime> birthdate { get; set; }
         public string image { get; set; }
         public Nullable<int> idRole { get; set; }
-
+    
         public virtual Role Role { get; set; }
     }
 }

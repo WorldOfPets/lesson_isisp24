@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -99,5 +100,28 @@ namespace lessonDB
             }
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select a picture";
+            //openFileDialog.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+            //            "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+            //            "Portable Network Graphic (*.png)|*.png";
+            openFileDialog.ShowDialog();
+
+            string filepath = openFileDialog.FileName;
+            string filename = System.IO.Path.GetFileName(filepath);
+            string fullpath = System.IO.Path.GetFullPath("..\\Images\\") + filename;
+
+            Helper.entities.User.FirstOrDefault(x => x.id == idUser).image = "..\\Images\\" + filename;
+            Helper.entities.SaveChanges();
+            refresh_grid();
+            System.IO.File.Copy(filepath, fullpath, true);
+
+            //var img = new Image();
+            //img.Source = new BitmapImage(new Uri(fullpath));
+            //myPanel.Children.Add(img);
+
+        }
     }
 }
